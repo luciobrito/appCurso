@@ -70,7 +70,7 @@
               <a href="{{route('form-cadastro-categoria')}}"> <span class="text h4">Cadastrar </span></a>
             </li>
             <li>
-              <a href="blank-page.html"> <span class="text h4">Gerenciar </span></a>
+              <a href="{{route('manipula-categoria')}}"> <span class="text h4">Gerenciar </span></a>
             </li>
           </ul>
         </li>

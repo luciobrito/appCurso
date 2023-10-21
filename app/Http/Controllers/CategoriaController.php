@@ -29,5 +29,10 @@ $registrosCat = $request->validate([
  return Redirect::route('index');
 
 }
+public function mostrarManipulaCategoria(){
+    $registrosCategoria = Categoria::All();
+
+    return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);
+}
 
 }
