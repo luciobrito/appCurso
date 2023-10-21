@@ -18,3 +18,10 @@ Route::post('/cadcurso',[CursoController::class,'cadastroCurso'])->name("cadastr
 Route::get('/cadaula',[AulaController::class,'mostrarFormAula'])->name("form-cadastro-aula");
 //rota para cadastrar categoria
 Route::post('/cadaula',[AulaController::class,'cadastroAula'])->name("cadastro-aula");
+//rotas para manipular categoria
+Route::get('/manipulacategoria',[CategoriaController::class,'mostrarManipulaCategoria'])->name("manipula-categoria");
+
+//rotas para alterar categoria
+Route::get('/alterar-categoria/{registrosCategoria}',[CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
+
+
