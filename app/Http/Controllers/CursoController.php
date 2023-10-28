@@ -28,4 +28,9 @@ class CursoController extends Controller
     
         return view('manipula_curso',['registrosCurso' => $registrosCurso]);
     }
+    public function DeletarCurso(Curso $registrosCurso)
+{
+    $registrosCurso->delete();
+    return Redirect::back();
+}
 }

@@ -34,5 +34,9 @@ public function mostrarManipulaCategoria(){
 
     return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);
 }
-
+public function DeletarCategoria(Categoria $registrosCategoria)
+{
+    $registrosCategoria->delete();
+    return Redirect::back();
+}
 }

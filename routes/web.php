@@ -26,6 +26,9 @@ Route::get('/manipula-curso',[CursoController::class,'mostrarManipulaCurso'])->n
 //rotas para alterar categoria
 Route::get('/alterar-categoria/{registrosCategoria}',[CategoriaController::class,'MostrarAlterarCategoria'])->name('alterar-categoria');
 Route::get('/alterar-curso/{registrosCurso}',[CursoController::class,'MostrarAlterarCurso'])->name('alterar-curso');
-Route::get('/alterar-aula/{registrosCurso}',[AulaController::class,'MostrarAlterarCurso'])->name('alterar-aula');
+Route::get('/alterar-aula/{registrosAula}',[AulaController::class,'MostrarAlterarAula'])->name('alterar-aula');
 
+Route::delete('/deletar-categoria/{registrosCategoria}',[CategoriaController::class, 'DeletarCategoria'])->name('deletar-categoria');
+Route::delete('/deletar-curso/{registrosCurso}',[CursoController::class, 'DeletarCurso'])->name('deletar-curso');
+Route::delete('/deletar-aula/{registrosAula}',[AulaController::class, 'DeletarAula'])->name('deletar-aula');
 
