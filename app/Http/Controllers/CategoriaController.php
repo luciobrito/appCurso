@@ -39,4 +39,14 @@ public function DeletarCategoria(Categoria $registrosCategoria)
     $registrosCategoria->delete();
     return Redirect::back();
 }
+public function BuscarCategoriaNome(Request $request)
+{
+    $registrosCategoria = Categoria::query();
+    $registrosCategoria->when($request->categoria, function($query, $valor){
+        $query->where('nomecategoria','like','%',$valor,'%');
+
+    });
+    $registrosCategoria = $registrosCategoria->get();
+    return view('manipula_categoria',['registrosCategoria' => $registrosCategoria]);    
+}
 }

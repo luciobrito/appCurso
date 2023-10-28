@@ -22,11 +22,11 @@
                   <section class="container m-5">
 
                     <div class="container m-5">
-                      <form method="get" action="/editar-categoria">
+                      <form method="get" action="{{ route('buscar-categoria-nome')}}">
                         <div class="row">
 
                           <div class="col-6">
-                            <input type="text" id="categoria" name="categoria" class="form-control" placeholder="Digite a Categoria" aria-label="First name">
+                            <input type="text" id="categoria" name="nomeCategoria" class="form-control" placeholder="Digite a Categoria" aria-label="First name">
                           </div>
 
                           <div class="col-6">

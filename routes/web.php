@@ -32,3 +32,5 @@ Route::delete('/deletar-categoria/{registrosCategoria}',[CategoriaController::cl
 Route::delete('/deletar-curso/{registrosCurso}',[CursoController::class, 'DeletarCurso'])->name('deletar-curso');
 Route::delete('/deletar-aula/{registrosAula}',[AulaController::class, 'DeletarAula'])->name('deletar-aula');
 
+//Rota para buscar categoria
+Route::get('/manipulanomecategoria/',[CategoriaController::class, 'BuscarCategoriaNome'])->name('buscar-categoria-nome');
